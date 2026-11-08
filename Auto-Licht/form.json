@@ -1,0 +1,134 @@
+{
+  "elements": [
+    {
+      "type": "List",
+      "name": "Lampen",
+      "caption": "Lampen",
+      "rowCount": 4,
+      "add": true,
+      "delete": true,
+      "columns": [
+        { "caption": "Schalten (Instanz)", "name": "SchaltenID", "width": "50%", "add": 0, "edit": { "type": "SelectInstance" } },
+        { "caption": "Status (Variable)", "name": "StatusID", "width": "auto", "add": 0, "edit": { "type": "SelectVariable" } }
+      ]
+    },
+    {
+      "type": "NumberSpinner",
+      "name": "DauerAn",
+      "caption": "Dauer An",
+      "suffix": "Minuten",
+      "minimum": 1
+    },
+    {
+      "type": "Label",
+      "caption": "So lange bleibt der Modus An, dann geht es zurück auf Auto."
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Präsenz und Helligkeit",
+      "expanded": true,
+      "items": [
+        {
+          "type": "List",
+          "name": "Melder",
+          "caption": "Präsenzmelder",
+          "rowCount": 3,
+          "add": true,
+          "delete": true,
+          "columns": [
+            { "caption": "Präsenz (Variable)", "name": "VariableID", "width": "auto", "add": 0, "edit": { "type": "SelectVariable" } }
+          ]
+        },
+        {
+          "type": "Label",
+          "caption": "Im Modus Auto schaltet Präsenz an, melden alle Melder keine Präsenz mehr, geht das Licht aus. Ohne Melder schaltet Auto nichts."
+        },
+        { "type": "SelectVariable", "name": "HelligkeitID", "caption": "Helligkeit (optional)" },
+        { "type": "NumberSpinner", "name": "Schwelle", "caption": "Einschalten unter", "suffix": "lx", "minimum": 0, "digits": 0 },
+        {
+          "type": "Label",
+          "caption": "Mit Helligkeit schaltet Präsenz nur ein, wenn es dunkler als die Schwelle ist. Ohne Helligkeit schaltet Präsenz immer ein."
+        }
+      ]
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "Taster",
+      "expanded": true,
+      "items": [
+        {
+          "type": "List",
+          "name": "Tasten",
+          "caption": "Einzeltasten (reihum Auto, Aus, An)",
+          "rowCount": 3,
+          "add": true,
+          "delete": true,
+          "columns": [
+            { "caption": "Name (steht im Grund)", "name": "Name", "width": "50%", "add": "", "edit": { "type": "ValidationTextBox" } },
+            { "caption": "Taste (Variable)", "name": "VariableID", "width": "auto", "add": 0, "edit": { "type": "SelectVariable" } }
+          ]
+        },
+        {
+          "type": "List",
+          "name": "Wippen",
+          "caption": "Wippen (an = oben: im Auto oben An und unten Aus, sonst zurück auf Auto)",
+          "rowCount": 3,
+          "add": true,
+          "delete": true,
+          "columns": [
+            { "caption": "Name (steht im Grund)", "name": "Name", "width": "50%", "add": "", "edit": { "type": "ValidationTextBox" } },
+            { "caption": "Wippe Kurz (Variable)", "name": "VariableID", "width": "auto", "add": 0, "edit": { "type": "SelectVariable" } }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExpansionPanel",
+      "caption": "LEDs (Auto Blau, An Grün, Aus Rot)",
+      "expanded": true,
+      "items": [
+        {
+          "type": "List",
+          "name": "LedsMdt",
+          "caption": "MDT-LEDs, eine je Taste",
+          "rowCount": 3,
+          "add": true,
+          "delete": true,
+          "columns": [
+            { "caption": "LED Farbe (Instanz)", "name": "InstanceID", "width": "auto", "add": 0, "edit": { "type": "SelectInstance" } }
+          ]
+        },
+        {
+          "type": "List",
+          "name": "LedsMdtWippe",
+          "caption": "MDT-LEDs je Wippe (links Blau/Grün/dunkel, rechts Blau/dunkel/Rot)",
+          "rowCount": 3,
+          "add": true,
+          "delete": true,
+          "columns": [
+            { "caption": "LED links (Instanz)", "name": "LinksID", "width": "50%", "add": 0, "edit": { "type": "SelectInstance" } },
+            { "caption": "LED rechts (Instanz)", "name": "RechtsID", "width": "auto", "add": 0, "edit": { "type": "SelectInstance" } }
+          ]
+        },
+        {
+          "type": "List",
+          "name": "LedsJung",
+          "caption": "Jung-LEDs (Beide blau, Links grün, Rechts rot)",
+          "rowCount": 3,
+          "add": true,
+          "delete": true,
+          "columns": [
+            { "caption": "LED Blau (Instanz)", "name": "BlauID", "width": "33%", "add": 0, "edit": { "type": "SelectInstance" } },
+            { "caption": "LED Grün (Instanz)", "name": "GruenID", "width": "33%", "add": 0, "edit": { "type": "SelectInstance" } },
+            { "caption": "LED Rot (Instanz)", "name": "RotID", "width": "auto", "add": 0, "edit": { "type": "SelectInstance" } }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [],
+  "status": [
+    { "code": 104, "icon": "inactive", "caption": "Keine Lampe eingestellt" },
+    { "code": 201, "icon": "error", "caption": "Eine eingestellte ID fehlt oder ist ungültig, siehe Log" }
+  ]
+}
