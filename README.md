@@ -1,6 +1,6 @@
 # IPS-Auto-Licht
 
-Symcon-Modul für Licht mit KNX und den Modi Auto, An und Aus. Eine Instanz steuert eine Lampengruppe. Vorbild ist der Home-Assistant-Blueprint „Licht | Auto“. Für Licht, das ein Taster nur umschaltet, gibt es `IPS-Licht`.
+Symcon-Modul „AutoLicht“ für Licht mit KNX und den Modi Auto, An und Aus. Eine Instanz steuert eine Lampengruppe. Vorbild ist der Home-Assistant-Blueprint „Licht | Auto“. Für Licht, das ein Taster nur umschaltet, gibt es `IPS-Licht`.
 
 ## Modi
 
