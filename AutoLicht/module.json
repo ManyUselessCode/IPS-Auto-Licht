@@ -1,9 +1,9 @@
 {
   "id": "{E43EBBB3-331C-4D98-82A0-D8E0CB634810}",
-  "name": "Auto-Licht",
+  "name": "AutoLicht",
   "type": 3,
   "vendor": "",
-  "aliases": ["Auto-Licht", "Autolicht"],
+  "aliases": ["Auto-Licht", "Autolicht", "Auto Licht"],
   "parentRequirements": [],
   "childRequirements": [],
   "implemented": [],
