@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Eine Instanz steuert eine Lampengruppe mit den Modi Auto, An und Aus, nach
- * dem Home-Assistant-Blueprint "Licht | Auto".
+ * Eine Instanz steuert eine Lampengruppe mit den Modi Auto, An und Aus.
  * Auto: Präsenz schaltet an (mit Helligkeit nur, wenn dunkel), keine Präsenz an
  * allen Meldern schaltet aus. An: alle Lampen an, nach der Dauer zurück auf Auto.
  * Aus: alle Lampen aus, Melder werden ignoriert. LEDs zeigen den Modus.
